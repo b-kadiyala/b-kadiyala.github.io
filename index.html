@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bharadwaj Kadiyala</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --accent: #1F2A44;
+    --accent-hover: #3A4A6B;
+    --text: #2A2A2A;
+    --text-muted: #6B6B6B;
+    --rule: #E5E5E5;
+    --bg: #FDFCFA;
+    --bg-soft: #F6F4F0;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Top nav */
+  nav.topnav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(253, 252, 250, 0.92);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .nav-inner {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .nav-name {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--accent);
+    letter-spacing: 0.01em;
+  }
+  .nav-links {
+    display: flex;
+    gap: 22px;
+  }
+  .nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.15s ease;
+  }
+  .nav-links a:hover {
+    color: var(--accent);
+  }
+
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 80px 32px 120px;
+  }
+
+  /* Header block */
+  .hero {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 40px;
+    align-items: start;
+    margin-bottom: 80px;
+  }
+  .photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #d9d4c8 0%, #b8b0a0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.85);
+    font-family: 'Lora', serif;
+    font-size: 56px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    box-shadow: 0 4px 20px rgba(31, 42, 68, 0.08);
+  }
+  .hero h1 {
+    font-family: 'Lora', serif;
+    font-size: 38px;
+    font-weight: 500;
+    color: var(--accent);
+    margin: 0 0 12px 0;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+  }
+  .hero .title {
+    font-size: 16px;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .hero .affil {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-bottom: 18px;
+  }
+  .hero .affil a { color: var(--text-muted); border-bottom: 1px solid var(--rule); }
+  .hero .contact {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 18px;
+  }
+  .quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+  .quick-links a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+  .quick-links a:hover { border-bottom-color: var(--accent); }
+  .quick-links .sep { color: #C4C0B8; }
+
+  /* Sections */
+  section {
+    margin-bottom: 80px;
+    scroll-margin-top: 80px;
+  }
+  h2 {
+    font-family: 'Lora', serif;
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--accent);
+    margin: 0 0 24px 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--rule);
+    letter-spacing: -0.005em;
+  }
+  h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin: 36px 0 16px 0;
+  }
+  h3:first-child { margin-top: 0; }
+
+  p { margin: 0 0 16px 0; }
+
+  a { color: var(--accent); }
+  a:hover { color: var(--accent-hover); }
+
+  /* News list */
+  .news {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .news li {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 18px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: 15px;
+  }
+  .news li:last-child { border-bottom: none; }
+  .news .date {
+    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding-top: 2px;
+  }
+  .news em { color: var(--text-muted); }
+
+  /* Publications */
+  .pub-year {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--accent);
+    margin: 32px 0 14px 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .pub-year:first-of-type { margin-top: 0; }
+  .pub {
+    margin-bottom: 22px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .pub .title {
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .pub .meta {
+    color: var(--text);
+  }
+  .pub em { font-style: italic; }
+  .pub .links {
+    display: block;
+    margin-top: 4px;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .pub .links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+  }
+  .pub .links a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .pub .award {
+    display: block;
+    margin-top: 6px;
+    padding-left: 12px;
+    border-left: 2px solid #C9B870;
+    font-size: 13px;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  /* Working papers */
+  .working-paper {
+    margin-bottom: 24px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .working-paper .title {
+    color: var(--accent);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .working-paper .meta {
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+
+  /* Teaching */
+  .teaching-block {
+    margin-bottom: 28px;
+  }
+  .teaching-block .institution {
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .course {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    font-size: 15px;
+  }
+  .course:last-child { border-bottom: none; }
+  .course .term {
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+
+  /* Service */
+  .service-block { margin-bottom: 24px; font-size: 15px; }
+  .service-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .service-block ul li {
+    padding: 6px 0;
+    color: var(--text);
+  }
+
+  /* Footer */
+  footer {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px;
+    border-top: 1px solid var(--rule);
+    font-size: 13px;
+    color: var(--text-muted);
+    text-align: center;
+  }
+  footer a { color: var(--text-muted); }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    main { padding: 48px 24px 80px; }
+    .hero {
+      grid-template-columns: 1fr;
+      gap: 24px;
+      text-align: center;
+    }
+    .photo { margin: 0 auto; width: 140px; height: 140px; font-size: 44px; }
+    .hero h1 { font-size: 30px; }
+    .quick-links { justify-content: center; }
+    .nav-inner { padding: 12px 20px; }
+    .nav-links { gap: 14px; }
+    .nav-links a { font-size: 13px; }
+    .news li { grid-template-columns: 1fr; gap: 4px; }
+    .news .date { font-size: 12px; }
+    h2 { font-size: 22px; }
+    .course { grid-template-columns: 1fr; gap: 2px; }
+  }
+
+  /* A preview banner (remove for final) */
+  .preview-banner {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background: var(--accent);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 100;
+    letter-spacing: 0.02em;
+  }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="nav-inner">
+    <div class="nav-name">Bharadwaj Kadiyala</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#service">Service</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO / HEADER -->
+  <header class="hero" id="about">
+    <div class="photo" aria-label="Profile photo placeholder">BK</div>
+    <div>
+      <h1>Bharadwaj Kadiyala</h1>
+      <div class="title">Assistant Professor of Operations &amp; Information Systems</div>
+      <div class="affil"><a href="https://eccles.utah.edu/">David Eccles School of Business</a> · University of Utah</div>
+      <div class="contact">
+        1655 Campus Center Dr., SFEBB 7235<br>
+        Salt Lake City, UT 84112<br>
+        bkadiyala [at] eccles [dot] utah [dot] edu
+      </div>
+      <div class="quick-links">
+        <a href="https://www.dropbox.com/scl/fi/47gtf4f8ycbv75unrawr8/Bharadwaj-CV-Aug2024.pdf?rlkey=bg88ug0cqimcdy6x4k8hfmuin&st=4wdhtqj4&dl=0">CV</a>
+        <span class="sep">·</span>
+        <a href="https://scholar.google.com/citations?user=_g2QgMAAAAAJ&hl=en">Google Scholar</a>
+        <span class="sep">·</span>
+        <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2882810">SSRN</a>
+        <span class="sep">·</span>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section>
+    <p>I am an Assistant Professor in the Operations and Information Systems department at the David Eccles School of Business, University of Utah. My research sits at the intersection of operations, information, and incentives — with a focus on how firms can design mechanisms and platforms that work well when information is incomplete, incentives are misaligned, or outcomes are delayed. Recent projects examine content moderation on competing platforms, social learning under polarization, and the economics of delayed-reward promotions in retail.</p>
+    <p>Before joining Utah, I completed my PhD at the Naveen Jindal School of Management, University of Texas at Dallas, and held a visiting position at the Hong Kong University of Science and Technology. <em>[Please confirm/edit — drafted from your CV.]</em></p>
+  </section>
+
+  <!-- NEWS -->
+  <section id="news">
+    <h2>News</h2>
+    <ul class="news">
+      <li>
+        <span class="date">May 2026</span>
+        <span><em>[Most recent item — e.g., paper acceptance, talk, award]</em></span>
+      </li>
+      <li>
+        <span class="date">Apr 2026</span>
+        <span><em>[Item — e.g., presenting at MSOM 2026 in (location)]</em></span>
+      </li>
+      <li>
+        <span class="date">Feb 2026</span>
+        <span><em>[Item]</em></span>
+      </li>
+      <li>
+        <span class="date">2024</span>
+        <span>"Dual Value of Delayed Incentives" published in <em>Manufacturing &amp; Service Operations Management</em>.</span>
+      </li>
+      <li>
+        <span class="date">2024</span>
+        <span>"Social Learning and Content Quality Under Polarization" published in <em>M&amp;SOM</em>.</span>
+      </li>
+      <li>
+        <span class="date">2023</span>
+        <span>First Place, INFORMS Service Science Best Cluster Paper Competition.</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research">
+    <h2>Research</h2>
+    <p>My work sits at the intersection of operations management, information economics, and platform design. I study how organizations make decisions when information is incomplete, incentives are misaligned across parties, or rewards are delayed in time — settings that arise in content platforms, omnichannel retail, vendor-managed supply chains, and customized pricing.</p>
+    <p>Broad themes: content platforms and moderation, retail operations and assortment learning, delayed incentives, and information-incentive design problems.</p>
+
+    <h3>Publications</h3>
+
+    <div class="pub-year">2024</div>
+
+    <div class="pub">
+      <span class="title">Social Learning and Content Quality Under Polarization.</span>
+      <span class="meta">Kadiyala, B., and D. Shin. <em>Manufacturing &amp; Service Operations Management</em>, 26(6): 2237–2255.</span>
+      <span class="links">
+        <a href="https://doi.org/10.1287/msom.2022.0533">DOI</a> · <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3916284">SSRN</a>
+      </span>
+      <span class="award">First Place, 2023 INFORMS Service Science Best Cluster Paper Competition.</span>
+    </div>
+
+    <div class="pub">
+      <span class="title">Dual Value of Delayed Incentives: An Empirical Investigation of Gift Card Promotions.</span>
+      <span class="meta">Kadiyala, B., Ö. Özer, and A. S. Şimşek. <em>Manufacturing &amp; Service Operations Management</em>, 26(5): 1806–1825.</span>
+      <span class="links">
+        <a href="https://doi.org/10.1287/msom.2022.0218">DOI</a> · <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3499711">SSRN</a>
+      </span>
+    </div>
+
+    <div class="pub-year">2023</div>
+
+    <div class="pub">
+      <span class="title">Information and Incentives in Inventory Management Models.</span>
+      <span class="meta">Kadiyala, B., H. Lee, and Ö. Özer. In J.-S. Song (Ed.), <em>Research Handbook on Inventory Management</em>, Edward Elgar Publishing. <em>Book chapter.</em></span>
+      <span class="links">
+        <a href="https://doi.org/10.4337/9781800377103.00020">DOI</a> · <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5035152">SSRN</a>
+      </span>
+    </div>
+
+    <div class="pub-year">2022</div>
+
+    <div class="pub">
+      <span class="title">Predicting Transaction Outcomes Under Customized Pricing with Discretion: A Structural Estimation Approach.</span>
+      <span class="meta">Kadiyala, B., R. Phillips, A. S. Şimşek, and G. van Ryzin. <em>Production and Operations Management</em>, 32(6): 1654–1673.</span>
+      <span class="links">
+        <a href="https://doi.org/10.1111/poms.13931">DOI</a> · <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3912853">SSRN</a>
+      </span>
+    </div>
+
+    <div class="pub-year">2021</div>
+
+    <div class="pub">
+      <span class="title">Data-Driven Approaches to Targeting Promotion E-mails: The Case of Delayed Incentives.</span>
+      <span class="meta">Kadiyala, B., Ö. Özer, and A. S. Şimşek. <em>Production and Operations Management</em>, 30(3): 766–782.</span>
+      <span class="links">
+        <a href="https://doi.org/10.1111/poms.13316">DOI</a> · <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3712428">SSRN</a>
+      </span>
+    </div>
+
+    <div class="pub-year">2020</div>
+
+    <div class="pub">
+      <span class="title">A Mechanism Design Approach to Vendor Managed Inventory.</span>
+      <span class="meta">Kadiyala, B., Ö. Özer, and A. Bensoussan. <em>Management Science</em>, 66(6): 2628–2652.</span>
+      <span class="links">
+        <a href="https://doi.org/10.1287/mnsc.2019.3297">DOI</a> · <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3117872">SSRN</a>
+      </span>
+    </div>
+
+    <h3>Working Papers &amp; Under Revision</h3>
+
+    <div class="working-paper">
+      <span class="title">Content Moderation under Competition: Spillovers, Advertising, and Liability.</span>
+      <span class="meta">with <a href="https://sites.google.com/site/woonams/Home">W. Hwang</a>. <em>Draft available upon request.</em></span>
+    </div>
+
+    <div class="working-paper">
+      <span class="title">Learning from Consideration Sets: Blackwell Sufficiency and Dynamic Assortments.</span>
+      <span class="meta">with <a href="https://www.hyndman-honhon.com/dorothee-honhon.html">D. Honhon</a> and <a href="https://gufaculty360.georgetown.edu/s/contact/00336000014TUn4AAG/canan-ulu">C. Ulu</a>. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6539818">[SSRN]</a></span>
+      <span class="award">Under review. Invited for presentation at 2025 MSOM Conference. Finalist, 2017 POMS College of SCM Student Paper Competition.</span>
+    </div>
+
+    <div class="working-paper">
+      <span class="title">Poisson Disorder Problem with Continuous Control of Costly Observations.</span>
+      <span class="meta">with <a href="http://sdayanik.bilkent.edu.tr/">S. Dayanik</a>. <em>Draft available upon request.</em></span>
+    </div>
+  </section>
+
+  <!-- TEACHING -->
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <p>I teach analytical and statistical methods to MBA, MSBA, and PhD students at the David Eccles School of Business, with a focus on building intuition for decision-making under uncertainty.</p>
+
+    <div class="teaching-block">
+      <div class="institution">University of Utah · David Eccles School of Business</div>
+      <div class="course">
+        <span>Analytical Decision Models I &amp; II (OSC 6610 / OIS 6611)</span>
+        <span class="term">Spring 2020 – present</span>
+      </div>
+      <div class="course">
+        <span>Statistics and Predictive Analytics (IS 6489)</span>
+        <span class="term">Spring 2020 – present</span>
+      </div>
+    </div>
+
+    <div class="teaching-block">
+      <div class="institution">Hong Kong University of Science and Technology</div>
+      <div class="course">
+        <span>Operations Management</span>
+        <span class="term">Spring 2018, Fall 2018</span>
+      </div>
+    </div>
+
+    <div class="teaching-block">
+      <div class="institution">UT Dallas · Naveen Jindal School of Management</div>
+      <div class="course">
+        <span>Operations Management</span>
+        <span class="term">Fall 2015</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE -->
+  <section id="service">
+    <h2>Service</h2>
+
+    <div class="service-block">
+      <h3>Editorial &amp; Refereeing</h3>
+      <p>Referee: <em>Management Science</em>, <em>Manufacturing &amp; Service Operations Management</em>, <em>Operations Research</em>, <em>Production and Operations Management</em>, <em>Naval Research Logistics</em>, <em>MSOM SiG</em>.</p>
+    </div>
+
+    <div class="service-block">
+      <h3>Conference Roles</h3>
+      <ul>
+        <li>Session chair, INFORMS Annual Meeting (2019–2024)</li>
+        <li>Session chair, POMS Annual Conference (2019, 2020)</li>
+        <li>Session chair, 15th Utah Winter Operations Conference (2022)</li>
+        <li>Session chair, INFORMS International Conference (2018)</li>
+        <li>Organizing committee (Academic), MSOM Conference, Dallas (2018)</li>
+      </ul>
+    </div>
+
+    <div class="service-block">
+      <h3>Paper Competition Judging</h3>
+      <ul>
+        <li>INFORMS BOM Best Working Paper Competition (2023)</li>
+        <li>MSOM Student Paper Competition (2018)</li>
+        <li>POMS-HK Student Paper Competition (2018)</li>
+      </ul>
+    </div>
+
+    <div class="service-block">
+      <h3>Memberships</h3>
+      <p>INFORMS · MSOM · POMS · Phi Kappa Phi</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Last updated May 2026 · <a href="mailto:bkadiyala@eccles.utah.edu">bkadiyala [at] eccles [dot] utah [dot] edu</a>
+</footer>
+
+<div class="preview-banner">Preview · not yet published</div>
+
+</body>
+</html>
