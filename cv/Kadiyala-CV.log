@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.16)  17 JUL 2026 18:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.16)  17 JUL 2026 18:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -403,7 +403,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 135.
 
-Overfull \hbox (3.70674pt too wide) in paragraph at lines 161--162
+Overfull \hbox (3.70674pt too wide) in paragraph at lines 162--163
 []\T1/ppl/m/n/10.95 ``Poisson dis-or-der prob-lem with con-tin-u-ous con-trol of costly ob-ser-va-tions.'' (with S. Dayan^^Yk) 
  []
 
@@ -415,7 +415,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [2]
-Overfull \hbox (23.71544pt too wide) in alignment at lines 194--261
+Overfull \hbox (23.71544pt too wide) in alignment at lines 195--262
  [] [] 
  []
 
@@ -427,12 +427,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [3]
-Overfull \hbox (23.71544pt too wide) in alignment at lines 263--277
+Overfull \hbox (23.71544pt too wide) in alignment at lines 264--278
  [] [] 
  []
 
 
-Overfull \hbox (23.71544pt too wide) in alignment at lines 280--285
+Overfull \hbox (23.71544pt too wide) in alignment at lines 281--286
  [] [] 
  []
 
@@ -482,10 +482,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  75i,11n,80p,1068b,650s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Kadiyala-CV.pdf (7 pages, 102175 bytes).
+Output written on Kadiyala-CV.pdf (7 pages, 103657 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 95 compressed objects within 1 object stream
+ 118 PDF objects out of 1000 (max. 8388607)
+ 96 compressed objects within 1 object stream
  32 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
